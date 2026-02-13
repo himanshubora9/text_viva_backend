@@ -24,7 +24,9 @@ router.post("/login", (req, res) => {
 });
 
 // Generate Stream Token
-router.get("/stream/token/:userId", (req, res) => {
+router.get("/stream/token/:userId", (req, res) => { 
+  console.log('generating token');
+   
   const { userId } = req.params;
 
   const streamToken = generateStreamToken(userId);
